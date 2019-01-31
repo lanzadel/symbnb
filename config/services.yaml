@@ -28,4 +28,4 @@ services:
     # please note that last definitions always *replace* previous ones
     App\Service\PaginationService:
         arguments:
-            $templatePath: 'admin/partials/pagiantion.html.twig'
+            $templatePath: 'admin/partials/pagination.html.twig'
