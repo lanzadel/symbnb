@@ -1,8 +1,5 @@
-var $ = require('jquery');
-
-console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
+const $ = require("jquery");
 
 global.$ = global.jQuery = $;
 
-require('bootstrap');
-require('./ad.js');
+require("bootstrap");

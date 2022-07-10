@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ path('admin_dashboard') }}">
                     <i class="fas fa-chart-line"></i>
                     Dashboard
                 </a>
@@ -43,6 +43,7 @@
                 <i class="fas fa-eye"></i>
                 Voir le site
             </li>
+
             {% if app.user %}
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="accountDropdownLink">

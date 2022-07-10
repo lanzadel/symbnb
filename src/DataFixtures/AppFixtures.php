@@ -22,7 +22,8 @@ class AppFixtures extends Fixture
     }
     public function load(ObjectManager $manager)
     {
-        $faker = Factory::create('FR-fr');
+        //$faker = Factory::create('FR-fr');
+        $faker = Factory::create();
 
         $adminRole = new Role();
         $adminRole->setTitle('ROLE_ADMIN');
@@ -30,10 +31,10 @@ class AppFixtures extends Fixture
 
         $adminUser = new User();
         $adminUser->setFirstName('Lior')
-            ->setLastName('Chala')
+            ->setLastName('Chamla')
             ->setEmail('lior@gmail.com')
             ->setHash($this->encoder->encodePassword($adminUser, 'password'))
-            ->setPicture('https://avatars.io/twitter/LiiorC')
+            ->setPicture('https://randomuser.me/api/portraits/men/56.jpg')
             ->setIntroduction($faker->sentence())
             ->setDescription('<p>'.join('<p></p>', $faker->paragraphs(3)).'</p>')
             ->addUserRole($adminRole);

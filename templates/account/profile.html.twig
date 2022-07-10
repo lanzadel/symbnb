@@ -3,17 +3,16 @@
 {% block title %} Modification du profile utilisatuer{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1 class="my-5">Modification du profile</h1>
+    
+      <div class="container">
+        <h1 class="my-5">Modification du profil</h1>
 
         {{ form_start(form) }}
-        
+
         <div class="row">
             <div class="col">
                 <div class="alert alert-light">
-                    <div class="alert-heading">
-                        Informations générales
-                    </div>
+                    <h2 class="alert-heading">Informations générales</h2>
                     <hr>
                     {{ form_row(form.firstName) }}
                     {{ form_row(form.lastName) }}
@@ -23,24 +22,22 @@
             </div>
             <div class="col">
                 <div class="alert alert-light">
-                    <div class="alert-heading">
-                        Détails
-                    </div>
+                    <h2 class="alert-heading">Détails</h2>
                     <hr>
                     {{ form_row(form.introduction) }}
-                    {# {{ form_row(form.description) }} #}
+                    {#{ form_row(form.description) }#}
+
                     <hr>
-                    <p>Si vous avez modifier vos modifications, vous pouvez les sauvegarder</p>
+                    <p>Si vous avez terminé vos modifications, vous pouvez les sauvegarder</p>
                     <button type="submit" class="btn btn-primary">
-                        <i class="fas fas-check"></i>
+                        <i class="fas fa-check"></i>
                         Enregistrer les modifications
                     </button>
                 </div>
             </div>
         </div>
-        {{ form_widget(form) }}
-
 
         {{ form_end(form) }}
     </div>
+
 {% endblock %}
